@@ -34,7 +34,6 @@ for (var i = 0; i < orgs.length; i++) {
     organizations[org_object.mnemonic] = org_coll.find(org_object)[0];;
 }
 
-printjson(organizations);
 var source_coll = db.sources_source;
 var source_version_coll = db.sources_sourceversion;
 var sources = cat('OCL_Sources/sources.json').split('\n');
