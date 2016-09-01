@@ -78,8 +78,8 @@ for (var i = 0; i < sources.length; i++) {
 
     
     source_version_object.uri='/orgs/' + org.mnemonic + '/sources/' + source.mnemonic + '/HEAD/';
-    source_version_object.concepts= [];
-    source_version_object.mappings= [];
+    // source_version_object.concepts= [];
+    // source_version_object.mappings= [];
     source_version_object.versioned_object_id= source._id.valueOf();
     source_version_object.versioned_object_type_id= source_type_object._id;
     source_version_object.previous_version_id= null;
