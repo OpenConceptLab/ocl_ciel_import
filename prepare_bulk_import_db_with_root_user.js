@@ -75,11 +75,11 @@ for (var i = 0; i < sources.length; i++) {
         uri: '/orgs/' + org.mnemonic + '/sources/' + source.mnemonic + '/HEAD/'
     };
     var source_version_object = source_object;
-
+    var source_version = source_version_coll.find(source_version_query)[0];
     
     source_version_object.uri='/orgs/' + org.mnemonic + '/sources/' + source.mnemonic + '/HEAD/';
-    // source_version_object.concepts= [];
-    // source_version_object.mappings= [];
+    source_version_object.concepts= source_version ? source_version.concepts : [];
+    source_version_object.mappings= source_version ? source_version.mappings : [];
     source_version_object.versioned_object_id= source._id.valueOf();
     source_version_object.versioned_object_type_id= source_type_object._id;
     source_version_object.previous_version_id= null;
