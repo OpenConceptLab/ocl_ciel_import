@@ -93,6 +93,6 @@ for (var i = 0; i < sources.length; i++) {
     });
 }
 var perf_source = db.sources_source.find({
-    mnemonic: 'NCoD'
+    mnemonic: 'CIEL'
 })[0];
 printjson(perf_source._id);
